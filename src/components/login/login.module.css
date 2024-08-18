@@ -1,0 +1,38 @@
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loginForm > input{
+    margin-bottom: 3px;
+}
+.loginForm > button{
+    background-color: #c0a18c;
+    border-radius: 50px;
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+}
+
+.errors{
+    color: red;
+    position: absolute;
+    
+}
+.h1{
+    margin-top: 80px;
+    padding-bottom: 20px;
+    color: #550a16;
+}
+.username{
+    padding:5px 20px ;
+    color: #8a6b70;
+    font-weight: 600;
+}
+.password{
+    margin-top: 10px;
+    padding:5px 20px ;
+    color: #8a6b70;
+    font-weight: 600; 
+}

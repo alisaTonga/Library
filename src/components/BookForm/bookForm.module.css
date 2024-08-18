@@ -1,0 +1,12 @@
+.BookForm{
+    color: #4b250c;
+    font-weight: 700;
+
+}
+#inputs{
+    margin-bottom: 30px;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,42 @@
+.header{
+    width: 100%;
+    background-color: #c0a18c;
+    height: 80px;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+.header > a:hover{
+    text-decoration: wavy;
+}
+.header > span{
+    color:  #4b250c;
+    margin-right: 20px;
+}
+.active{
+    text-decoration: underline;
+    font-weight: 900;
+    color: #a1653d;
+
+}
+.withoutLogging{
+    display: flex;
+    gap: 20px;
+
+}
+.noLogging{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: x-large;
+}
+.noLogging:hover{
+    color: #4b250c;
+    text-decoration: underline;
+}
+.noLogging:active{
+    color: #a1653d;
+}

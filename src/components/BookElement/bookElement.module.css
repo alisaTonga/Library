@@ -1,0 +1,36 @@
+.card{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #F0DCCA;
+    border: 3px solid #550a16;
+    width: 11vw;
+    color: #550a16;
+    }
+.title{
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+}
+.author{
+    text-align: left;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    gap: 10px;
+}
+.year{
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.isbn{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-weight: 500;
+}
