@@ -1,12 +1,18 @@
-package de.ait.library.app.entity;
-public class Book {
+package de.ait.library.app.DTO;
+
+import de.ait.library.app.entity.Book;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class BookResponseDTO {
     private Long id;
     private String title;
     private String author;
     private Integer year;
     private String isbn13;
 
-    public Book(Long id, String title, String author, Integer year, String isbn13) {
+    public BookResponseDTO(Long id, String title, String author, Integer year, String isbn13) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -14,14 +20,7 @@ public class Book {
         this.isbn13 = isbn13;
     }
 
-    public Book() {
-    }
-
-    public Book(String title, String author, Integer year, String isbn13) {
-        this.title = title;
-        this.author = author;
-        this.year = year;
-        this.isbn13 = isbn13;
+    public BookResponseDTO() {
     }
 
     public Long getId() {
@@ -45,7 +44,7 @@ public class Book {
     }
 
     public void setAuthor(String author) {
-        author = author;
+        this.author = author;
     }
 
     public Integer getYear() {
@@ -60,18 +59,16 @@ public class Book {
         return isbn13;
     }
 
-    public void setISBN13(String ISBN13) {
+    public void setIsbn13(String isbn13) {
         this.isbn13 = isbn13;
     }
+    public static BookResponseDTO of(Book book) {
+        return new BookResponseDTO(book.getId(), book.getTitle(), book.getAuthor(), book.getYear(), book.getIsbn13());
+    }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", year=" + year +
-                ", isbn13='" + isbn13 + '\'' +
-                '}';
+    public static List<BookResponseDTO> of(List<Book> books) {
+        return books.stream()
+                .map(b-> BookResponseDTO.of(b))
+                .toList();
     }
 }

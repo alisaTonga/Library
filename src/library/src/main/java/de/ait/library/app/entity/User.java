@@ -13,6 +13,9 @@ public class User {
         this.password = password;
     }
 
+    public User() {
+    }
+
     public void setId(Long id) {
         this.id = id;
     }

@@ -1,15 +1,17 @@
 package de.ait.library.app.service;
 
 
+import de.ait.library.app.DTO.BookRequestDTO;
+import de.ait.library.app.DTO.BookResponseDTO;
 import de.ait.library.app.entity.Book;
 
 import java.util.List;
 
 public interface BookServiceInterface {
-    Book deleteBookById(Long id);
-    List<Book> findAll();
-    List<Book> findBook(String title, String author, String isbn);
-    Book findBookById(Long id);
-    Book addNewBook(Book book);
-    Book updateBook (Book book);
+    BookResponseDTO deleteBookById(Long id);
+    List<BookResponseDTO> findAll();
+    List<BookResponseDTO> getBook(String title, String author,Integer year, String isbn);
+    BookResponseDTO findBookById(Long id);
+    BookResponseDTO addNewBook(BookRequestDTO book);
+    BookResponseDTO updateBook (Long id, BookRequestDTO  book);
 }

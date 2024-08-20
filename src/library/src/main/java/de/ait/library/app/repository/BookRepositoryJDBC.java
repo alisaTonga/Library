@@ -5,10 +5,14 @@ import de.ait.library.app.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @Repository
 public class BookRepositoryJDBC implements BookRepositoryInterface{
@@ -37,32 +41,41 @@ public class BookRepositoryJDBC implements BookRepositoryInterface{
 
     @Override
     public Book deleteBookById(Long id) {
-        String query = "DELETE * FROM books WHERE id = ?";
+        String query = "DELETE FROM books WHERE id = ?";
         return jdbcTemplate.queryForObject(query, bookRowMapper, id);
     }
 
     @Override
-    public Book findBookById(Long id) {
-        String query = "SELECT * FROM books WHERE id = ?";
-        return jdbcTemplate.queryForObject(query, bookRowMapper, id);
+    public Book save(Book book) {
+        if (book.getId() == null) {
+            return create(book);
+        }
+        else{
+            return update(book);
+        }
     }
-//
-//    @Override
-//    public Book findBookByTitle(String title) {
-//        String query = "SELECT * FROM books WHERE title = ?";
-//        return jdbcTemplate.queryForObject(query, bookRowMapper, title);
-//    }
-//
-//    @Override
-//    public List<Book> findBookByAuthor(String author) {
-//        String query = "SELECT * FROM books WHERE author = ?";
-//        return jdbcTemplate.query(query, bookRowMapper, author);
-//
-//    }
-//
-//    @Override
-//    public Book findBookByIsbn(String isbn) {
-//        String query = "SELECT * FROM books WHERE isbn = ?";
-//        return jdbcTemplate.queryForObject(query, bookRowMapper, isbn);
-//    }
+
+    private Book update(Book book) {
+        String query = "UPDATE books SET title = ?, author = ?, year = ?, isnb13 = ? WHERE id= ?";
+        int affectedRows = jdbcTemplate.update(query,  book.getTitle(), book.getAuthor(), book.getYear(), book.getIsbn13());
+        return affectedRows ==1 ? book : null;
+    }
+
+    private Book create(Book book) {
+        SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(dataSource)
+        .usingGeneratedKeyColumns("id")
+                .withTableName("books");
+
+        Map<String, Object> parameters = new HashMap<>();
+        parameters.put("title", book.getTitle());
+        parameters.put("author", book.getAuthor());
+        parameters.put("year", book.getYear());
+        parameters.put("isbn13", book.getIsbn13());
+
+        Long generatedId = jdbcInsert.executeAndReturnKey(parameters).longValue();
+        book.setId(generatedId);
+        return book;
+    }
+
+
 }
