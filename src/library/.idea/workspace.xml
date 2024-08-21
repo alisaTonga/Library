@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="704bc318-b5b3-4d9c-be0d-4915601e8715" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/configuration/WebConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/configuration/WebConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/repository/BookRepoCreate_Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/repository/BookRepoCreate_Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/repository/BookRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/repository/BookRepositoryInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/repository/BookRepositoryJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/repository/BookRepositoryJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/repository/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/repository/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/repository/BookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/library/app/service/BookServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/library/app/service/BookServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/ait/library/app/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/ait/library/app/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/ait/library/app/repository/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/ait/library/app/repository/BookRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/ait/library/app/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/ait/library/app/service/BookService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,11 +104,22 @@
       <updated>1724015386966</updated>
       <workItem from="1724015387768" duration="310000" />
       <workItem from="1724017967594" duration="1455000" />
-      <workItem from="1724095870580" duration="25556000" />
+      <workItem from="1724095870580" duration="32832000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/ait/library/app/service/BookService.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

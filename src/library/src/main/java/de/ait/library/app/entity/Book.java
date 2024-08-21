@@ -45,7 +45,7 @@ public class Book {
     }
 
     public void setAuthor(String author) {
-        author = author;
+        this.author = author;
     }
 
     public Integer getYear() {
@@ -60,7 +60,7 @@ public class Book {
         return isbn13;
     }
 
-    public void setISBN13(String ISBN13) {
+    public void setIsbn13(String isbn13) {
         this.isbn13 = isbn13;
     }
 

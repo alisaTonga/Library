@@ -41,7 +41,7 @@ public class BookRepository implements BookRepositoryInterface{
             b.setTitle(book.getTitle());
             b.setAuthor(book.getAuthor());
             b.setYear(book.getYear());
-            b.setISBN13(book.getIsbn13());
+            b.setIsbn13(book.getIsbn13());
         }
         return book;
     }

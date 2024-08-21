@@ -49,7 +49,8 @@ public class BookService implements BookServiceInterface{
 
     @Override
     public BookResponseDTO addNewBook(BookRequestDTO bookDto) {
-        Book book = bookRepository.save(mapper.map(bookDto, Book.class));
+        Book book1 = mapper.map(bookDto, Book.class);
+        Book book = bookRepository.save(book1);
         return mapper.map(book, BookResponseDTO.class);
     }
 
